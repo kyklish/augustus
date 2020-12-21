@@ -264,6 +264,9 @@ static void handle_hotkeys(const hotkeys *h)
     if (h->clone_building) {
         building_clone_from_grid_offset(widget_city_current_grid_offset());
     }
+    if (h->show_overlay_relative) {
+        show_overlay_from_grid_offset(widget_city_current_grid_offset());
+    }
 }
 
 static void handle_input(const mouse *m, const hotkeys *h)
